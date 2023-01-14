@@ -78,7 +78,7 @@ if PlaceId == 5780309044 then
 	  FolderToSave - Name of the folder where the UI files will be stored <string>
 	})]]
 	local win = SolarisLib:New({
-	  Name = "Infinite Hub v6.4  ⭐ ⭐  |  @Darkzin",
+	  Name = "Infinite Hub v6.4  ⭐ ⭐  |  @Darkzin, @Cools",
 	  FolderToSave = "SolarisLibStuff"
 	})
 	
