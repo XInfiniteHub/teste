@@ -1,0 +1,129 @@
+--// Notification \\--
+local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+Notification:Notify(
+    {Title = "Infinite Hub Auto Boss", Description = "Aproveite"},
+    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
+)
+
+wait(1)
+
+-----------------------------------------------------------
+--     local devs = { Darkzin and Cool }                 --
+-----------------------------------------------------------
+
+
+--// Libray \\--
+local SolarisLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/XInfiniteHub/teste/main/Infintie%20Hub%20Libray%20S"))()
+
+
+--// Main Code \\--
+--[[SolarisLib:New({
+  Name - Title of the UI <string>
+  FolderToSave - Name of the folder where the UI files will be stored <string>
+})]]
+local win = SolarisLib:New({
+  Name = "Auto Boss  Infinite Hub ⭐ ⭐  |  @Darkzin, @Cools",
+  FolderToSave = "SolarisLibStuff"
+})
+
+
+--// Tabs \\--
+local AuBoss = win:Tab("Auto Boss")
+
+
+--// Auto Boss Main \\--
+local sec = AuBoss:Section("--<    Aviso !!    >--")
+local button = sec:Button("Aperte aqui", function ()
+	local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+	local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+	Notification:Notify(
+    {Title = "Start Auto Boss", Description = "Cuidado quando for executar, agora o jogo consegue indentificar quem e quem não esta"},
+    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
+	)
+	Notification:Notify(
+    {Title = "Start Auto Boss", Description = "usando esse script, o recomendado mesmo é usar as outras opções, mais se for usar o Auto Boss use apartir da Segunda faze (Depois do Parkour)"},
+    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
+	)
+	Notification:Notify(
+    {Title = "Start Auto Boss", Description = "da Segunda faze (Depois do Parkour)"},
+    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
+	)
+end)
+
+
+local sec = AuBoss:Section("--<    Auto Boss Main    >--")
+local button = sec:Button("Start Auto Boss", function ()
+  	getgenv().WaitTime = 240 -- amount time you want added to your run in seconds
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/sunexn/standsawakening/main/uncanny.lua",true))() -- open source
+end)
+
+
+local sec = AuBoss:Section("--<    More Options    >--")
+local button = sec:Button("Disable effects", function ()
+	if game:GetService("Workspace"):FindFirstChild("Effects") then
+    	game:GetService("Workspace"):FindFirstChild("Effects"):Destroy()
+	end
+	if game:GetService("Workspace").Map:FindFirstChild("ThunderParts") then
+   		game:GetService("Workspace").Map:FindFirstChild("ThunderParts"):Destroy()
+	end
+end)
+local button = sec:Button("Sword No Cooldown", function ()
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/itsyouranya/free/main/Anya%20Stands%20Awakening%20Helper.lua'),true))()
+end)
+local button = sec:Button("Complete Parkour", function ()
+	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(20.4561386, 113.245972, 196.61351, 0.0634383112, 5.81675401e-08, -0.99798578, 8.29346689e-08, 1, 6.35567972e-08, 0.99798578, -8.67995524e-08, 0.0634383112))
+end)
+local toggle = sec:Toggle("Spam Shoot Ray Sword", false,"Toggle", function(spamsr)
+	if spamsr then
+		getgenv().spamsrw = true
+		while getgenv().spamsrw do
+			local A_1 = Vector3.new(303.29681396484375, -1688.1998291015625, -9520.798828125)
+			local Event = game:GetService("Workspace").Reset43354776.KnightsSword.RayGunClient.ShootRay
+			Event:FireServer(A_1)
+
+
+			local A_1 = Vector3.new(989.9542846679688, -1326.624755859375, -9489.0498046875)
+			local Event = game:GetService("Workspace").Reset43354776.KnightsSword.RayGunClient.ShootRay
+			Event:FireServer(A_1)
+		end
+	else
+		getgenv().spamsrw = false
+	end
+end)
+local toggle = sec:Toggle("Silly Guitar Auto Play All Songs", false,"Toggle", function(playas)
+	if playas then
+		getgenv().playasw = true
+		while getgenv().playasw do
+			local A_1 = "H"
+			local Event = game:GetService("Workspace").Reset43354776.SillyGuitar.playKey
+			Event:FireServer(A_1)
+			local A_1 = "T"
+			local Event = game:GetService("Workspace").Reset43354776.SillyGuitar.playKey
+			Event:FireServer(A_1)
+			local A_1 = "Y"
+			local Event = game:GetService("Workspace").Reset43354776.SillyGuitar.playKey
+			Event:FireServer(A_1)
+			local A_1 = "F"
+			local Event = game:GetService("Workspace").Reset43354776.SillyGuitar.playKey
+			Event:FireServer(A_1)
+			local A_1 = "J"
+			local Event = game:GetService("Workspace").Reset43354776.SillyGuitar.playKey
+			Event:FireServer(A_1)
+			local A_1 = "K"
+			local Event = game:GetService("Workspace").Reset43354776.SillyGuitar.playKey
+			Event:FireServer(A_1)
+			local A_1 = "L"
+			local Event = game:GetService("Workspace").Reset43354776.SillyGuitar.playKey
+			Event:FireServer(A_1)
+			local A_1 = "N"
+			local Event = game:GetService("Workspace").Reset43354776.SillyGuitar.playKey
+			Event:FireServer(A_1)
+			local A_1 = "M"
+			local Event = game:GetService("Workspace").Reset43354776.SillyGuitar.playKey
+			Event:FireServer(A_1)
+		end
+	else
+		getgenv().playasw = false
+	end
+end)
