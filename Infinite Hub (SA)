@@ -1,0 +1,635 @@
+--// Notification \\--
+local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+Notification:Notify(
+    {Title = "Checking Game", Description = "..."},
+    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 8, Type = "default"}
+)
+
+wait(8)
+
+
+repeat wait() until game:IsLoaded()
+local PlaceId = game.PlaceId
+
+if PlaceId == 5780309044 then
+	local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+	local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+	Notification:Notify(
+	    {Title = "Game Detected", Description = "Stand Awakening"},
+	    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 2, Type = "default"}
+	)
+
+	wait(2)
+
+	local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+	local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+	Notification:Notify(
+	    {Title = "Starting InfiniteHub", Description = ""},
+	    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 2, Type = "default"}
+	)
+
+	wait(3)
+
+	local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+	local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+	Notification:Notify(
+	    {Title = "Novo Update 🥳", Description = "Aproveite"},
+	    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
+	)
+
+	wait(1)
+
+	local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+	local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+	Notification:Notify(
+	    {Title = "Info", Description = "Bugs corrigidos, auto boss agora esta funcionando e opções no Main"},
+	    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
+	)
+
+	wait(1)
+
+	local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+	local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+	Notification:Notify(
+	    {Title = "Creditos", Description = "@Darkzin"},
+	    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
+	)
+
+	--// Print \\--
+	print("Infinite Hub Executed!")
+	print("Version 6.4")
+	print("Have Fun")
+	
+	--[===========[
+			--// New Project Awakening v6.0
+			--// made by darkzin and cool
+			--// have fun
+	--]===========]
+	
+	
+	--// Libray \\--
+	local SolarisLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/XInfiniteHub/Infinite-Hub/main/Infinite%20Hub%20Libray?token=GHSAT0AAAAAAB5PAWSQO6YBKX52IW6J6CAYY6B57YQ"))()
+	
+	
+	--// Main Code \\--
+	--[[SolarisLib:New({
+	  Name - Title of the UI <string>
+	  FolderToSave - Name of the folder where the UI files will be stored <string>
+	})]]
+	local win = SolarisLib:New({
+	  Name = "Infinite Hub v6.4  ⭐ ⭐  |  @Darkzin",
+	  FolderToSave = "SolarisLibStuff"
+	})
+	
+	
+	--// Tabs \\--
+	local wel = win:Tab("Welcome")
+	local Stands = win:Tab("Stands")
+	local main = win:Tab("Main")
+	local sr = win:Tab("Server Remotes")
+	local buy = win:Tab("Buy Items")
+	local st = win:Tab("Stand Farm")
+	local it = win:Tab("Item Farm")
+	local AuBoss = win:Tab("Auto Boss")
+	local tele = win:Tab("Teleport")
+	local lp = win:Tab("Local Player")
+	local antilag = win:Tab("Anti Lag")
+	
+	
+	--// Welcome \\--
+	local sec = wel:Section("Welcome Main")
+	local label = sec:Label("Bem vindo ao Project Awakening")
+	
+	
+	--// Stands \\--
+	local sec = Stands:Section("--<    Duvidas?    >--")
+	local button = sec:Button("Aperte aqui", function ()
+		local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+		local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+		Notification:Notify(
+	    {Title = "Stands Main", Description = "Nesta opção os stands abaixo que você selecionar tera seu TimeStop de 20 segundos / D4F ele spawna 1 clone"},
+	    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
+		)
+	end)
+	local sec = Stands:Section("--<    Stands Main    >--")
+	
+	local button = sec:Button("Shadow Dio", function ()
+	     		local args = {
+					[1] = 20000000,           -- 20000000 = 20 or 15
+					[2] = "shadowdio"			-- Shadow dio / Stw
+				}
+	
+				game:GetService("ReplicatedStorage").Main.Timestop:FireServer(unpack(args))
+	end)
+	local button = sec:Button("JSP", function ()
+	     		local args = {
+					[1] = 20000000,           -- 20000000 = 20 or 15
+					[2] = "jotaro"			-- Shadow dio / Stw
+				}
+	
+				game:GetService("ReplicatedStorage").Main.Timestop:FireServer(unpack(args))
+	end)
+	local button = sec:Button("EVA 01", function ()
+	     		local args = {
+					[1] = 20000000,           -- 20000000 = 20 or 15
+					[2] = "diooh"			-- Shadow dio / Stw
+				}
+	
+				game:GetService("ReplicatedStorage").Main.Timestop:FireServer(unpack(args))
+	end)
+	local button = sec:Button("Steve", function ()
+	     		local args = {
+					[1] = 20000000,           -- 20000000 = 20 or 15
+					[2] = "jotaro"			-- Shadow dio / Stw
+				}
+	
+				game:GetService("ReplicatedStorage").Main.Timestop:FireServer(unpack(args))
+	end)
+	local button = sec:Button("Herobrine", function ()
+	     		local args = {
+					[1] = 20000000,           -- 20000000 = 20 or 15
+					[2] = "jotaro"			-- Shadow dio / Stw
+				}
+	
+				game:GetService("ReplicatedStorage").Main.Timestop:FireServer(unpack(args))
+	end)
+	local button = sec:Button("The World Au", function ()
+	     		local args = {
+					[1] = 20000000,           -- 20000000 = 20 or 15
+					[2] = "diego"			-- Shadow dio / Stw
+				}
+	
+				game:GetService("ReplicatedStorage").Main.Timestop:FireServer(unpack(args))
+	end)
+	local button = sec:Button("The World Ova", function ()
+	     		local args = {
+					[1] = 20000000,           -- 20000000 = 20 or 15
+					[2] = "dioova"			-- Shadow dio / Stw
+				}
+	
+				game:GetService("ReplicatedStorage").Main.Timestop:FireServer(unpack(args))
+	end)
+	
+	local sec = Stands:Section("--<    D4C Clones    >--")
+	
+	local button = sec:Button("D4C Clones 1", function ()
+				local args = {
+					[1] = "Alternate",
+					[2] = "Clone"
+				}	
+	
+			game:GetService("ReplicatedStorage").Main.Input:FireServer(unpack(args)) 
+	end)
+	
+	
+	--// Main Main \\--
+	local sec = main:Section("--<    Players Main    >--")
+	local button = sec:Button("Auto Block", function ()
+	      	local args = {
+				[1] = "Alternate",
+				[2] = "Block"
+			}
+	
+			game:GetService("ReplicatedStorage").Main.Input:FireServer(unpack(args))
+	end)
+	local toggle = sec:Toggle("Loop Auto Block", false,"Toggle", function(LoopAuB)
+		if LoopAuB then
+			getgenv().LoopAuBw = true
+			while getgenv().LoopAuBw do
+				wait(2)
+				local args = {
+				    [1] = "Alternate",
+				    [2] = "Block"
+				}
+				
+				game:GetService("ReplicatedStorage").Main.Input:FireServer(unpack(args))
+			end
+		else
+			getgenv().LoopAuBw = false
+		end
+	end)
+	local button = sec:Button("Infinite Pose", function ()
+			local args = {
+				[1] = true
+			}
+	
+			game:GetService("ReplicatedStorage").Main.Menacing:FireServer(unpack(args))
+	end)
+	local button = sec:Button("Death", function ()
+	    	local args = {
+	    	    [1] = false
+	    	}
+	
+	    	game:GetService("ReplicatedStorage").Main.Death:FireServer(unpack(args))
+	end)
+	
+	
+	local sec = main:Section("--<    Goldem Expirience Requiem / Golden Expirience Main    >--")
+	local button = sec:Button("Infinite Damage Deflect / Goldem Expirience Requiem", function ()
+			local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+			local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+	
+			Notification:Notify(
+	    		{Title = "Aviso", Description = "Requer o Goldem Expirience Requiem para usar isto, você esta usando ele?"},
+	    		{OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "option"},
+	    		{Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84), Callback = function()       	
+				local ohString1 = "Alternate"
+				local ohString2 = "RTZ"
+				local ohBoolean3 = true
+	
+				game:GetService("ReplicatedStorage").Main.Input:FireServer(ohString1, ohString2, ohBoolean3)
+			end}
+		)
+	end)
+	local button = sec:Button("Infinite Damage Deflect / Goldem Expirience", function ()
+		local ohString1 = "Alternate"
+		local ohString2 = "Deflect"
+	
+		game:GetService("ReplicatedStorage").Main.Input:FireServer(ohString1, ohString2)
+	end)
+	
+	
+	local sec = main:Section("--<    Shadow Dio Main    >--")
+	local button = sec:Button("Shadow Dio Infinite Kinifes (Use Q first)", function ()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/Shadow%20Inf%20Kinifes'))()
+	end)
+	local toggle = sec:Toggle("Loop Shadow Dio Infinite Kinifes", false,"Toggle", function(LoopSdiK)
+		if LoopSdiK then
+			getgenv().LoopSdiKw = true
+			while getgenv().LoopSdiKw do
+				wait(3)
+				loadstring(game:HttpGet('https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/Shadow%20Inf%20Kinifes'))()			
+			end
+		else
+			getgenv().LoopSdiKw = false
+		end
+	end)
+	local button = sec:Button("Shadow Dio Infinite H ", function ()
+	      	local args = {
+	  			  [1] = "Alternate",
+	  			  [2] = "STWRTZ",
+	  			  [3] = true
+			}
+	
+			game:GetService("ReplicatedStorage").Main.Input:FireServer(unpack(args))
+	end)
+	local toggle = sec:Toggle("Loop Shadow Dio Infinite Effect", false,"Toggle", function(LoopSE)
+		if LoopSE then
+			getgenv().LoopSEw = true
+			while getgenv().LoopSEw do
+				wait(1)
+				local ohInstance1 = workspace.Reset43354776.Stand.FakeTorso.particle.Pixelate
+				local ohBoolean2 = true
+
+				game:GetService("ReplicatedStorage").Trail:FireServer(ohInstance1, ohBoolean2)
+			end
+		else
+			getgenv().LoopSEw = false
+		end
+	end)
+		local toggle = sec:Toggle("Loop Shadow Dio Infinite Fake Stand", false,"Toggle", function(LoopFAKES)
+		if LoopFAKES then
+			getgenv().LoopFAKESw = true
+			while getgenv().LoopSEw do
+				wait(1)
+				-- Head
+				local args = {
+				    [1] = game:GetService("Players").LocalPlayer.Character.Stand.FakeHead,
+				    [2] = 0
+				}
+				game:GetService("ReplicatedStorage").Main.Transparency:FireServer(unpack(args))
+				-- Torso
+				local args = {
+				    [1] = game:GetService("Players").LocalPlayer.Character.Stand.FakeTorso,
+				    [2] = 0
+				}
+				game:GetService("ReplicatedStorage").Main.Transparency:FireServer(unpack(args))
+				-- Right Arm
+				local args = {
+				    [1] = game:GetService("Players").LocalPlayer.Character.Stand.FakeRightArm,
+				    [2] = 0
+				}
+				game:GetService("ReplicatedStorage").Main.Transparency:FireServer(unpack(args))
+				-- Left Arm
+				local args = {
+				    [1] = game:GetService("Players").LocalPlayer.Character.Stand.FakeLeftArm,
+				    [2] = 0
+				}
+				game:GetService("ReplicatedStorage").Main.Transparency:FireServer(unpack(args))
+			end
+		else
+			getgenv().LoopFAKESw = false
+		end
+	end)
+	
+	local sec = main:Section("--<    Karls Main    >--")
+	local button = sec:Button("Wings ULF inf ", function ()
+	      		local args = {
+				    [1] = game:GetService("Players").LocalPlayer.Character.Wing1,
+				    [2] = 0
+				}
+	
+				game:GetService("ReplicatedStorage").Main.Transparency:FireServer(unpack(args))
+	end)
+	
+	
+	local sec = main:Section("--<    Omt and Smot Main    >--")
+	local button = sec:Button("Omt and Smot Drill ", function ()
+			local args = {
+	  		  	[1] = "Alternate",
+	   		  	[2] = "Drill"
+			}
+	
+			game:GetService("ReplicatedStorage").Main.Input:FireServer(unpack(args))
+	end)
+	
+	
+	local sec = main:Section("--<    Sans Main    >--")
+	local button = sec:Button("Sans teleport player limbo ", function ()
+	      	local args = {
+				[1] = "Alternate",
+				[2] = "Teleport",
+				[3] = false,
+				[4] = Vector3.new(621, -75, 235)
+			}
+		
+			game:GetService("ReplicatedStorage").Main.Input:FireServer(unpack(args))
+	end)
+	local toggle = sec:Toggle("Sans Sound Effect (Key T/H)", false,"Toggle", function(sans)
+		if sans then
+			getgenv().sansw = true
+			while getgenv().sansw do
+				wait(0.1)
+				game:GetService("ReplicatedStorage").Effects.BoneZone.Primary.reverb.SoundId = "rbxassetid://5121734927"
+				game:GetService("ReplicatedStorage").Effects.BoneZone.Primary.eoe.SoundId = "rbxassetid://5121734927"
+			end
+		else
+			getgenv().sansw = false
+			game:GetService("ReplicatedStorage").Effects.BoneZone.Primary.reverb.SoundId = "rbxassetid://401680588"
+			game:GetService("ReplicatedStorage").Effects.BoneZone.Primary.eoe.SoundId = "rbxassetid://4264104024"
+		end
+	end)
+	
+	
+	local sec = main:Section("--<    Made in Heave Main    >--")
+	local button = sec:Button("Made in Heaven Universe Reset", function ()
+	        local args = {
+	            [1] = "Alternate",
+	            [2] = "UniverseReset"
+	        }
+	
+	        game:GetService("ReplicatedStorage").Main.Input:FireServer(unpack(args))
+	end)
+	local button = sec:Button("Made in Heaven Time Accel (No cooldown)", function ()
+	        local args = {
+	            [1] = "Alternate",
+	            [2] = "TimeAccel"
+	        }
+	
+	        game:GetService("ReplicatedStorage").Main.Input:FireServer(unpack(args))
+	end)
+	local button = sec:Button("Made in Heaven invisible (Hallow)", function ()
+	       local args = {
+	            [1] = "Alternate",
+	            [2] = "Appear",
+	            [3] = false
+	        }
+	
+	        game:GetService("ReplicatedStorage").Main.Input:FireServer(unpack(args))
+	end)
+	
+	
+	--// Server Remotes Main \\--
+	local sec = sr:Section("--<    Duvidas?    >--")
+	local button = sec:Button("Aperte aqui", function ()
+		local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+		local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+		Notification:Notify(
+	    {Title = "Server Remotes Main", Description = "Nesta opção ficam os Remotes do servidor, ex: Lag Server / UpdateSpawn"},
+	    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
+		)
+	end)
+	
+	
+	local sec = sr:Section("--<    Server Remotes Main    >--")
+	local button = sec:Button("Update Spawn", function ()
+		game:GetService("ReplicatedStorage").UpdateSpawn:FireServer()
+	end)
+	
+	
+	local sec = sr:Section("--<    Lag Server    >--")
+	local toggle = sec:Toggle("Lag Server / Need Hierophant Green", false,"Toggle", function(LG)
+	  	if LG then
+			  getgenv().LGw = true
+			  while getgenv().LGw do
+				  wait(0.3)
+				  loadstring(game:HttpGet('https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/INF%20ESMERAlD'))()
+			  end
+		else
+			  getgenv().LGw = false
+		  end
+	end)
+	
+	
+	--// Buy Items Main \\--
+	local sec = buy:Section("--<    Buy Items Main    >--")
+	local button = sec:Button("Arrow", function ()
+		local args = {
+		    [1] = "Arrow"
+		}
+		
+		game:GetService("ReplicatedStorage").Purchase:FireServer(unpack(args))
+	end)
+	local button = sec:Button("Rokakaka", function ()
+		local args = {
+		    [1] = "Rokakaka Fruit"
+		}
+		
+		game:GetService("ReplicatedStorage").Purchase:FireServer(unpack(args))
+	end)
+	local button = sec:Button("Shiny Arrow", function ()
+		local args = {
+		    [1] = "Shiny Arrow"
+		}
+	
+		game:GetService("ReplicatedStorage").Purchase:FireServer(unpack(args))
+	end)
+	
+	
+	--// AUto Boss Main \\--
+	local sec = AuBoss:Section("--<    Stand Farm Main    >--")
+	local label = sec:Label("Entre no boss e execute o loadstring, ele iniciara uma nova gui")
+	local label = sec:Label("com o Auto Boss")
+	
+	
+	--// Stand Farm Main \\--
+	local sec = st:Section("--<    Stand Farm Main    >--")
+	local button = sec:Button("The World", function ()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/tw'))()
+	end)
+	local button = sec:Button("Star Platinum", function ()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/jp'))()
+	end)
+	local button = sec:Button("Star Platinum Ova", function ()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/jpova'))()
+	end)
+	local button = sec:Button("Omt", function ()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/OMT%20Farm'))()
+	end)
+	
+	
+	local sec = st:Section("--<    Items No Animation    >--")
+	local button = sec:Button("Arrow (Need arrow in your hand)", function ()
+		game:GetService("ReplicatedStorage").ItemEvents.Arrow:FireServer()
+	end)
+	local button = sec:Button("Rokakaka (Need rokakaka in your hand)", function ()
+		game:GetService("ReplicatedStorage").ItemEvents.Roka:FireServer()
+	end)
+	local button = sec:Button("Shiny Arrow (Need shiny arrow in your hand)", function ()
+		game:GetService("ReplicatedStorage").ItemEvents.Roka:FireServer()
+	end)
+	
+	
+	--// Item Farm Main \\--
+	local sec = it:Section("--<    Item Farm Main    >--")
+	local toggle = sec:Toggle("Start / Stop Item Farm", false,"Toggle", function(start)
+		if start then
+			getgenv().startw = true
+			while getgenv().startw do
+				wait(0.1)
+				for i,v in pairs(game:GetService("Workspace"):GetChildren()) do
+					if v:IsA("Tool") and v:FindFirstChild("Handle") then
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Handle.CFrame
+					end
+				end
+			end
+		else
+			getgenv().startw = false
+		end
+	end)
+	local toggle = sec:Toggle("Grab Tools", false,"Toggle", function(grab)
+		if grab then
+			getgenv().grabw = true
+			while getgenv().grabw do
+				wait(0.1)
+				print("soon...")
+			end
+		else
+			getgenv().grabw = false
+		end
+	end)
+	
+	
+	--// Teleport Main \\--
+	local sec = tele:Section("--<    Teleport Main    >--")
+	local button = sec:Button("Bank", function ()
+		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(1342.28, 584.95, -546.44))
+	end)
+	local button = sec:Button("Farm Zone", function ()
+		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-316.59, 466.42, -1502.53))
+	end)
+	local button = sec:Button("Timmy", function ()
+		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(1395.74, 581.69, -218.97))
+	end)
+	local button = sec:Button("Key Boss", function ()
+		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(1099, 589, -738))
+	end)
+	local button = sec:Button("D4C Place", function ()
+		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-3093, 464, -428))
+	end)
+	local button = sec:Button("Arena 1v1", function ()
+		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(1247.95, 581.04, -279.96))
+	end)
+	local button = sec:Button("Key Spawm 1", function ()
+		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(1043.8, 591.63, -185.03))
+	end)
+	local button = sec:Button("Key Spawm 2", function ()
+		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(1617.95, 588.23, -755.87))
+	end)
+	
+	
+	--// Local Player \\--
+	local sec = lp:Section("--<    Local Player Main    >--")
+	local toggle = sec:Toggle("Ctrl + Click Tp", false,"Toggle", function(CtrlTp)
+	  	if CtrlTp then
+			  getgenv().CtrlTpw = true
+			  while getgenv().CtrlTpw do
+				wait(0.1)
+				local Plr = game:GetService("Players").LocalPlayer
+				local Mouse = Plr:GetMouse()
+	
+				Mouse.Button1Down:connect(function()
+				if not game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.LeftControl) then return end
+				if not Mouse.Target then return end
+				Plr.Character:MoveTo(Mouse.Hit.p)
+				end)
+			  end
+			else
+				getgenv().CtrlTpw = false
+		  end
+	end)
+	local toggle = sec:Toggle("Ctrl + Click Destroy", false,"Toggle", function(CtrlDes)
+	  	if CtrlDes then
+			  getgenv().CtrlDesw = true
+			  while getgenv().CtrlDesw do
+				wait(0.1)
+				local Plr = game:GetService("Players").LocalPlayer
+				local Mouse = Plr:GetMouse()
+	
+				Mouse.Button1Down:connect(function()
+				if not game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.LeftControl) then return end
+				if not Mouse.Target then return end
+				Mouse.Target:Destroy()
+				end)
+			  end
+			else
+				getgenv().CtrlDesw = false
+		  end
+	end)
+	local slider = sec:Slider("WalkSpeed", 16,500,16,2.5,"Speed", function(speed)
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = speed
+	end)
+	local slider = sec:Slider("JumpPower", 50,500,50,2.5,"Jump", function(jump)
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = jump
+	end)
+	
+	
+	--// Anti Lag Main \\--
+	local sec = antilag:Section("--<    Anti Lag Main    >--")
+	local toggle = sec:Toggle("Max fps (50-360)", false,"Toggle", function(fps)
+		if fps then
+			getgenv().fpsw = true
+			while getgenv().fpsw do
+				wait(0.1)
+				local FPS = 100
+				local clock = tick()
+	
+				while true do
+				    while clock + 1 / FPS > tick() do end
+				    wait()
+				    clock = tick()
+				end
+			end
+		else
+			getgenv().fpsw = false
+		end
+	end)
+	
+	--// end \\--
+
+
+else
+
+	local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+	local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+	Notification:Notify(
+    	{Title = "Game not detected", Description = "..."},
+    	{OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
+	)
+
+	wait(0.5)
+
+	game.Players.LocalPlayer:Kick("Game not detected, join the discord server to see the games where the project hub works")
+
+end
