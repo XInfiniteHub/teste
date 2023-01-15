@@ -99,7 +99,7 @@ if PlaceId == 5780309044 then
 	
 	--// Welcome \\--
 	local sec = wel:Section("Welcome Main")
-	local label = sec:Label("Bem vindo ao Project Awakening")
+	local label = sec:Label("Bem vindo ao Infinite Hub")
 	
 	
 	--// Stands \\--
