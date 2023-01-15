@@ -3,10 +3,10 @@ local NotificationHolder = loadstring(game:HttpGet("https://raw.githubuserconten
 local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
 Notification:Notify(
     {Title = "Checking Game", Description = "..."},
-    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 8, Type = "default"}
+    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 3, Type = "default"}
 )
 
-wait(8)
+wait(3)
 
 
 repeat wait() until game:IsLoaded()
@@ -94,7 +94,7 @@ if PlaceId == 5780309044 then
 	local AuBoss = win:Tab("Auto Boss")
 	local tele = win:Tab("Teleport")
 	local lp = win:Tab("Local Player")
-	local antilag = win:Tab("Anti Lag")
+	local CheckItems = win:Tab("Item Notifier")
 	
 	
 	--// Welcome \\--
@@ -115,60 +115,165 @@ if PlaceId == 5780309044 then
 	local sec = Stands:Section("--<    Stands Main    >--")
 	
 	local button = sec:Button("Shadow Dio", function ()
-	     		local args = {
-					[1] = 20000000,           -- 20000000 = 20 or 15
-					[2] = "shadowdio"			-- Shadow dio / Stw
-				}
-	
-				game:GetService("ReplicatedStorage").Main.Timestop:FireServer(unpack(args))
+        --// Ui Libray
+        local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+        local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+
+        --// Select Stands Time Stop
+        --// Shadow Dio
+
+        local stw = game:GetService("Players").LocalPlayer.Backpack.ShadowTheWorld
+        if stw then
+            Notification:Notify(
+                {Title = "Shadow Dio Time Stop", Description = "Time Stoped"},
+                {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
+            )
+        
+            local args = {
+        		[1] = 20000000,           
+        		[2] = "shadowdio"			
+        	}
+        
+        	game:GetService("ReplicatedStorage").Main.Timestop:FireServer(unpack(args))
+        end
 	end)
 	local button = sec:Button("JSP", function ()
-	     		local args = {
-					[1] = 20000000,           -- 20000000 = 20 or 15
-					[2] = "jotaro"			-- Shadow dio / Stw
-				}
-	
-				game:GetService("ReplicatedStorage").Main.Timestop:FireServer(unpack(args))
+        --// Ui Libray
+        local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+        local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+
+        --// Select Stands Time Stop
+        --// JSP
+
+        local jsp = game:GetService("Players").Reset43354776.Backpack.JSP
+        if jsp then
+            Notification:Notify(
+                {Title = "JSP Time Stop", Description = "Time Stoped"},
+                {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
+            )
+
+        	local args = {
+        		[1] = 20000000,           -- 20000000 = 20 or 15
+        		[2] = "jotaro"			-- Shadow dio / Stw
+        	}
+
+        	game:GetService("ReplicatedStorage").Main.Timestop:FireServer(unpack(args))
+        end
 	end)
 	local button = sec:Button("EVA 01", function ()
-	     		local args = {
-					[1] = 20000000,           -- 20000000 = 20 or 15
-					[2] = "diooh"			-- Shadow dio / Stw
-				}
-	
-				game:GetService("ReplicatedStorage").Main.Timestop:FireServer(unpack(args))
+        --// Ui Libray
+        local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+        local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+
+        --// Select Stands Time Stop
+        --// EVA01
+
+        local eva = game:GetService("Players").Reset43354776.Backpack.EVA01
+        if eva then
+            Notification:Notify(
+                {Title = "EVA01 Time Stop", Description = "Time Stoped"},
+                {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
+            )
+
+        	local args = {
+        		[1] = 20000000,           -- 20000000 = 20 or 15
+        		[2] = "diooh"			-- Shadow dio / Stw
+        	}
+
+        	game:GetService("ReplicatedStorage").Main.Timestop:FireServer(unpack(args))
+        end
 	end)
 	local button = sec:Button("Steve", function ()
-	     		local args = {
-					[1] = 20000000,           -- 20000000 = 20 or 15
-					[2] = "jotaro"			-- Shadow dio / Stw
-				}
-	
-				game:GetService("ReplicatedStorage").Main.Timestop:FireServer(unpack(args))
+        --// Ui Libray
+        local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+        local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+
+        --// Select Stands Time Stop
+        --// StevePlatinum
+
+        local steve = game:GetService("Players").Reset43354776.Backpack.StevePlatinum
+        if steve then
+            Notification:Notify(
+                {Title = "Steve Platinum Time Stop", Description = "Time Stoped"},
+                {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
+            )
+
+        	local args = {
+        		[1] = 20000000,           -- 20000000 = 20 or 15
+        		[2] = "jotaro"			-- Shadow dio / Stw
+        	}
+
+        	game:GetService("ReplicatedStorage").Main.Timestop:FireServer(unpack(args))
+        end
 	end)
 	local button = sec:Button("Herobrine", function ()
-	     		local args = {
-					[1] = 20000000,           -- 20000000 = 20 or 15
-					[2] = "jotaro"			-- Shadow dio / Stw
-				}
-	
-				game:GetService("ReplicatedStorage").Main.Timestop:FireServer(unpack(args))
+        --// Ui Libray
+        local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+        local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+        
+        --// Select Stands Time Stop
+        --// StevePlatinum
+        
+        local her = game:GetService("Players").Reset43354776.Backpack.Herobrine
+        if her then
+            Notification:Notify(
+                {Title = "Herobrine Platinum Time Stop", Description = "Time Stoped"},
+                {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
+            )
+        
+        	local args = {
+        		[1] = 20000000,           -- 20000000 = 20 or 15
+        		[2] = "jotaro"			-- Shadow dio / Stw
+        	}
+        
+        	game:GetService("ReplicatedStorage").Main.Timestop:FireServer(unpack(args))
+        end
 	end)
 	local button = sec:Button("The World Au", function ()
-	     		local args = {
-					[1] = 20000000,           -- 20000000 = 20 or 15
-					[2] = "diego"			-- Shadow dio / Stw
-				}
-	
-				game:GetService("ReplicatedStorage").Main.Timestop:FireServer(unpack(args))
+        --// Ui Libray
+        local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+        local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+        
+        --// Select Stands Time Stop
+        --// StevePlatinum
+        
+        local twau = game:GetService("Players").Reset43354776.Backpack.game:GetService("ReplicatedStorage").Viewports.Stands.TheWorldAlternateUniverseStand
+        if twau then
+            Notification:Notify(
+                {Title = "TheWorld Alternate Universe Time Stop", Description = "Time Stoped"},
+                {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
+            )
+        
+        	local args = {
+        		[1] = 20000000,           -- 20000000 = 20 or 15
+        		[2] = "diego"			-- Shadow dio / Stw
+        	}
+        
+        	game:GetService("ReplicatedStorage").Main.Timestop:FireServer(unpack(args))
+        end
 	end)
 	local button = sec:Button("The World Ova", function ()
-	     		local args = {
-					[1] = 20000000,           -- 20000000 = 20 or 15
-					[2] = "dioova"			-- Shadow dio / Stw
-				}
-	
-				game:GetService("ReplicatedStorage").Main.Timestop:FireServer(unpack(args))
+        --// Ui Libray
+        local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+        local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+        
+        --// Select Stands Time Stop
+        --// TheWorldOVAStand
+        
+        local twova = game:GetService("Players").Reset43354776.Backpack.game:GetService("ReplicatedStorage").Viewports.Stands.TheWorldOVAStand
+        if twova then
+            Notification:Notify(
+                {Title = "TheWorld Alternate Universe Time Stop", Description = "Time Stoped"},
+                {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
+            )
+        
+        	local args = {
+        		[1] = 20000000,           -- 20000000 = 20 or 15
+        		[2] = "dioova"			-- Shadow dio / Stw
+        	}
+        
+        	game:GetService("ReplicatedStorage").Main.Timestop:FireServer(unpack(args))
+        end
 	end)
 	
 	local sec = Stands:Section("--<    D4C Clones    >--")
@@ -595,27 +700,85 @@ if PlaceId == 5780309044 then
 	end)
 	
 	
-	--// Anti Lag Main \\--
-	local sec = antilag:Section("--<    Anti Lag Main    >--")
-	local toggle = sec:Toggle("Max fps (50-360)", false,"Toggle", function(fps)
-		if fps then
-			getgenv().fpsw = true
-			while getgenv().fpsw do
-				wait(0.1)
-				local FPS = 100
-				local clock = tick()
-	
-				while true do
-				    while clock + 1 / FPS > tick() do end
-				    wait()
-				    clock = tick()
-				end
-			end
-		else
-			getgenv().fpsw = false
-		end
+	--// Check Items Main \\--
+	local sec = CheckItems:Section("--<    Item Notifier Main    >--")
+	local button = sec:Button("Check Arrow", function ()
+        --// Ui Libray
+        local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+        local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+
+        --// Item Notifier Arrow
+
+        local Arrow = game:GetService("Workspace").Arrow
+        if Arrow then
+            Notification:Notify(
+                {Title = "Arrow Spawned", Description = "..."},
+                {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
+            )
+        end
 	end)
-	
+    local button = sec:Button("Check Rokakaka Fruit", function ()
+        --// Ui Libray
+        local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+        local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+
+        --// Item Notifier Rokakaka
+
+        local roka = game:GetService("Workspace")["Rokakaka Fruit"]
+        if roka then
+            Notification:Notify(
+                {Title = "Rokakaka Fruit Spawned", Description = "..."},
+                {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
+            )
+        end
+	end)
+    local button = sec:Button("Check Requiem Arrow", function ()
+        --// Ui Libray
+        local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+        local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+
+        --// Item Notifier Requiem Arrow
+
+        local RArrow = game:GetService("Workspace")["Requiem Arrow"]
+        if RArrow then
+            Notification:Notify(
+                {Title = "Requiem Arrow Spawned", Description = "..."},
+                {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
+            )
+        end
+	end)
+    local button = sec:Button("Check DIO's Diary", function ()
+        --// Ui Libray
+        local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+        local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+
+        --// Item Notifier DIO's Diary
+
+        local DioDiary = game:GetService("Workspace")["DIO's Diary"]
+        if DioDiary then
+            Notification:Notify(
+                {Title = "DIO's Diary Spawned", Description = "..."},
+                {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
+            )
+        end
+	end)
+    local button = sec:Button("Check Hell Arrow", function ()
+        --// Ui Libray
+        local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+        local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+
+        --// Item Notifier DIO's Diary
+
+        local HellArrow = game:GetService("Workspace")["Hell Arrow"]
+        if HellArrow then
+            Notification:Notify(
+                {Title = "Hell Arrow Spawned", Description = "..."},
+                {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
+            )
+        end
+	end)
+
+
 	--// end \\--
 
 else
