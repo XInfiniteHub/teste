@@ -74,7 +74,7 @@ end)
 local button = sec:Button("Complete Parkour", function ()
 	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(20.4561386, 113.245972, 196.61351, 0.0634383112, 5.81675401e-08, -0.99798578, 8.29346689e-08, 1, 6.35567972e-08, 0.99798578, -8.67995524e-08, 0.0634383112))
 end)
-local toggle = sec:Toggle("Spam Shoot Ray Sword", false,"Toggle", function(spamsr)
+local toggle = sec:Toggle("Spam Shoot Ray Sword (not execute)", false,"Toggle", function(spamsr)
 	if spamsr then
 		getgenv().spamsrw = true
 		while getgenv().spamsrw do
@@ -91,7 +91,7 @@ local toggle = sec:Toggle("Spam Shoot Ray Sword", false,"Toggle", function(spams
 		getgenv().spamsrw = false
 	end
 end)
-local toggle = sec:Toggle("Silly Guitar Auto Play All Songs", false,"Toggle", function(playas)
+local toggle = sec:Toggle("Silly Guitar Auto Play All Songs (not execute)", false,"Toggle", function(playas)
 	if playas then
 		getgenv().playasw = true
 		while getgenv().playasw do
