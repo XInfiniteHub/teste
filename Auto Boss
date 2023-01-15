@@ -23,7 +23,7 @@ local SolarisLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/XI
   FolderToSave - Name of the folder where the UI files will be stored <string>
 })]]
 local win = SolarisLib:New({
-  Name = "Auto Boss  Infinite Hub ⭐ ⭐  |  @Darkzin, @Cools",
+  Name = "Auto Boss Infinite Hub ⭐ ⭐  |  @Darkzin, @Cools",
   FolderToSave = "SolarisLibStuff"
 })
 
