@@ -25,7 +25,7 @@ if PlaceId == 5780309044 then
 	local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
 	local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
 	Notification:Notify(
-	    {Title = "Starting InfiniteHub", Description = ""},
+	    {Title = "Starting Infinity Hub", Description = ""},
 	    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 2, Type = "default"}
 	)
 
@@ -43,26 +43,17 @@ if PlaceId == 5780309044 then
 	local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
 	local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
 	Notification:Notify(
-	    {Title = "Info", Description = "Bugs corrigidos, auto boss agora esta funcionando e opções no Main"},
-	    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
-	)
-
-	wait(1)
-
-	local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
-	local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
-	Notification:Notify(
 	    {Title = "Creditos", Description = "@Darkzin, @Cool"},
 	    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
 	)
 
 	--// Print \\--
-	print("Infinite Hub Executed!")
-	print("Version 6.4")
+	print("Infinity Hub Executed!")
+	print("Version 6.6")
 	print("Have Fun")
 	
 	--[===========[
-			--// New Project Awakening v6.0
+			--// New Project Awakening v6.6
 			--// made by darkzin and cool
 			--// have fun
 	--]===========]
@@ -78,7 +69,7 @@ if PlaceId == 5780309044 then
 	  FolderToSave - Name of the folder where the UI files will be stored <string>
 	})]]
 	local win = SolarisLib:New({
-	  Name = "Infinite Hub v6.4  ⭐ ⭐  |  @Darkzin, @Cools",
+	  Name = "Infinity Hub v6.6  ⭐ ⭐  |  @Darkzin, @Cools",
 	  FolderToSave = "SolarisLibStuff"
 	})
 	
@@ -100,6 +91,14 @@ if PlaceId == 5780309044 then
 	--// Welcome \\--
 	local sec = wel:Section("Welcome Main")
 	local label = sec:Label("Bem vindo ao Infinite Hub")
+    local button = sec:Button("Info", function ()
+        local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+        local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+        Notification:Notify(
+            {Title = "📃 Info", Description = "Nova Upade v6.6, nesta update conta com Item Notifier, novas mudanças no Auto Boss e Movo estilo da GUI"},
+            {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 8, Type = "default"}
+        )
+    end)
 	
 	
 	--// Stands \\--
@@ -767,12 +766,87 @@ if PlaceId == 5780309044 then
         local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
         local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
 
-        --// Item Notifier DIO's Diary
+        --// Item Notifier Hell Arrow
 
         local HellArrow = game:GetService("Workspace")["Hell Arrow"]
         if HellArrow then
             Notification:Notify(
                 {Title = "Hell Arrow Spawned", Description = "..."},
+                {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
+            )
+        end
+	end)
+    local button = sec:Button("Check DIO's Skull 2", function ()
+        --// Ui Libray
+        local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+        local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+
+        --// Item Notifier DIO's Skull 2
+
+        local DS = game:GetService("Workspace")["DIO's Skull 2"]
+        if DS then
+            Notification:Notify(
+                {Title = "DIO's Skull 2 Spawned", Description = "..."},
+                {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
+            )
+        end
+	end)
+    local button = sec:Button("Check Camera", function ()
+        --// Ui Libray
+        local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+        local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+
+        --// Item Notifier Camera
+
+        local cam = game:GetService("Workspace").Camera.ClassName == "Tool"
+        if cam then
+            Notification:Notify(
+                {Title = "Camera Spawned", Description = "..."},
+                {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
+            )
+        end
+	end)
+    local button = sec:Button("Check Uncanny Key", function ()
+        --// Ui Libray
+        local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+        local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+
+        --// Item Notifier Uncanny Key
+
+        local key = game:GetService("Workspace")["Uncanny Key"]
+        if key then
+            Notification:Notify(
+                {Title = "Uncanny Key Spawned", Description = "..."},
+                {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
+            )
+        end
+	end)
+    local button = sec:Button("Check Pot Platinum's Diary", function ()
+        --// Ui Libray
+        local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+        local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+
+        --// Item Notifier Pot Platinum's Diary
+
+        local pot = game:GetService("Workspace")["Pot Platinum's Diary"]
+        if pot then
+            Notification:Notify(
+                {Title = "Pot Platinum's Diary Spawned", Description = "..."},
+                {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
+            )
+        end
+	end)
+    local button = sec:Button("Check Red Heart", function ()
+        --// Ui Libray
+        local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+        local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+
+        --// Item Notifier Red Heart
+
+        local redh = game:GetService("Workspace")["Red Heart"]
+        if redh then
+            Notification:Notify(
+                {Title = "Red Heart Spawned", Description = "..."},
                 {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
             )
         end
