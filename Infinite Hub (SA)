@@ -485,6 +485,20 @@ if PlaceId == 5780309044 then
 	
 	        game:GetService("ReplicatedStorage").Main.Input:FireServer(unpack(args))
 	end)
+    local toggle = sec:Toggle("Loop Universe Reset", false,"Toggle", function (univerR)
+        if univerR then
+            getgenv().univerRw = true
+            while getgenv().univerRw do
+                wait(5)
+	            local args = {
+	                [1] = "Alternate",
+	                [2] = "UniverseReset"
+	            }
+	            game:GetService("ReplicatedStorage").Main.Input:FireServer(unpack(args))
+            end
+            getgenv().univerRw = false
+        end
+    end)
 	local button = sec:Button("Made in Heaven Time Accel (No cooldown)", function ()
 	        local args = {
 	            [1] = "Alternate",
