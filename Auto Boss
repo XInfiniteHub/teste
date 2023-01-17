@@ -97,5 +97,10 @@ local button = sec:Button("Damage Multipler (9e9) ", function ()
     game:GetService("Workspace").DamageMultiplier.Value = "9e9"  -- Damage Multipler
 end)
 local button = sec:Button("Final Phase ", function ()
-    game:GetService("Workspace").FinalPhase.Value = true  -- Fase final
+    game:GetService("Workspace").FinalPhase.Value = true    -- Fase final
+     wait(0.2)
+    game:GetService("Workspace").BossPhase.Value = "Phase3"     -- Phase Final
+end)
+local button = sec:Button("Regen (9e9) ", function ()
+    game:GetService("Workspace").Regen.Value = "9e9"    -- Regen
 end)
