@@ -1,8 +1,16 @@
---// Notification \\--
+--// Ui Libray \\--
 local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
 local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+
+
+--// Notification \\--
 Notification:Notify(
     {Title = "Infinite Hub Auto Boss", Description = "Aproveite"},
+    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
+)
+wait(0.5)
+Notification:Notify(
+    {Title = "Credito", Description = "--// @Darkzin                                                     --// @Cool"},
     {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
 )
 
@@ -23,7 +31,7 @@ local SolarisLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/XI
   FolderToSave - Name of the folder where the UI files will be stored <string>
 })]]
 local win = SolarisLib:New({
-  Name = "Auto Boss Infinite Hub ⭐ ⭐  |  @Darkzin, @Cools",
+  Name = "Auto Boss Infinite Hub   |   @Darkzin, @Cool",
   FolderToSave = "SolarisLibStuff"
 })
 
@@ -74,56 +82,20 @@ end)
 local button = sec:Button("Complete Parkour", function ()
 	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(20.4561386, 113.245972, 196.61351, 0.0634383112, 5.81675401e-08, -0.99798578, 8.29346689e-08, 1, 6.35567972e-08, 0.99798578, -8.67995524e-08, 0.0634383112))
 end)
-local toggle = sec:Toggle("Spam Shoot Ray Sword (not execute)", false,"Toggle", function(spamsr)
-	if spamsr then
-		getgenv().spamsrw = true
-		while getgenv().spamsrw do
-			local A_1 = Vector3.new(303.29681396484375, -1688.1998291015625, -9520.798828125)
-			local Event = game:GetService("Workspace").Reset43354776.KnightsSword.RayGunClient.ShootRay
-			Event:FireServer(A_1)
 
 
-			local A_1 = Vector3.new(989.9542846679688, -1326.624755859375, -9489.0498046875)
-			local Event = game:GetService("Workspace").Reset43354776.KnightsSword.RayGunClient.ShootRay
-			Event:FireServer(A_1)
-		end
-	else
-		getgenv().spamsrw = false
-	end
+local sec = AuBoss:Section("--<    Server Options    >--")
+local button = sec:Button("Reset Place", function ()
+	game:GetService("Workspace").restartplease.Value = true  -- Reset Place
+    wait(1)
+    game:GetService("Workspace").restartplease.Value = false  -- Reset Place
 end)
-local toggle = sec:Toggle("Silly Guitar Auto Play All Songs (not execute)", false,"Toggle", function(playas)
-	if playas then
-		getgenv().playasw = true
-		while getgenv().playasw do
-			local A_1 = "H"
-			local Event = game:GetService("Workspace").Reset43354776.SillyGuitar.playKey
-			Event:FireServer(A_1)
-			local A_1 = "T"
-			local Event = game:GetService("Workspace").Reset43354776.SillyGuitar.playKey
-			Event:FireServer(A_1)
-			local A_1 = "Y"
-			local Event = game:GetService("Workspace").Reset43354776.SillyGuitar.playKey
-			Event:FireServer(A_1)
-			local A_1 = "F"
-			local Event = game:GetService("Workspace").Reset43354776.SillyGuitar.playKey
-			Event:FireServer(A_1)
-			local A_1 = "J"
-			local Event = game:GetService("Workspace").Reset43354776.SillyGuitar.playKey
-			Event:FireServer(A_1)
-			local A_1 = "K"
-			local Event = game:GetService("Workspace").Reset43354776.SillyGuitar.playKey
-			Event:FireServer(A_1)
-			local A_1 = "L"
-			local Event = game:GetService("Workspace").Reset43354776.SillyGuitar.playKey
-			Event:FireServer(A_1)
-			local A_1 = "N"
-			local Event = game:GetService("Workspace").Reset43354776.SillyGuitar.playKey
-			Event:FireServer(A_1)
-			local A_1 = "M"
-			local Event = game:GetService("Workspace").Reset43354776.SillyGuitar.playKey
-			Event:FireServer(A_1)
-		end
-	else
-		getgenv().playasw = false
-	end
+local button = sec:Button("True Damage", function ()
+    game:GetService("Workspace").CantDamage.Value = true
+end)
+local button = sec:Button("Damage Multipler (9e9) ", function ()
+    game:GetService("Workspace").DamageMultiplier.Value = "9e9"  -- Damage Multipler
+end)
+local button = sec:Button("Final Phase ", function ()
+    game:GetService("Workspace").FinalPhase.Value = true  -- Fase final
 end)
