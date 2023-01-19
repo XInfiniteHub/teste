@@ -9,4 +9,6 @@ if PlaceId == 5780309044 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/XInfiniteHub/teste/main/Infinite%20Hub%20(SA)"))()
 elseif PlaceId == 11423467063 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/XInfiniteHub/teste/main/Auto%20Boss"))()
+elseif PlaceId == 662417684 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/XInfiniteHub/teste/main/Infinity%20Hub%20Luck%20Block%20B"))()
 end
