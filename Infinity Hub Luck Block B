@@ -1,0 +1,157 @@
+--// Ui Libray \\--
+local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+local SolarisLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/XInfiniteHub/teste/main/Infintie%20Hub%20Libray%20S"))()
+
+
+--// Windown \\--
+--[[SolarisLib:New({
+  Name - Title of the UI <string>
+  FolderToSave - Name of the folder where the UI files will be stored <string>
+})]]
+local win = SolarisLib:New({
+  Name = "Infinity Hub   ||   @Darkzin, @Cool",
+  FolderToSave = "SolarisLibStuff"
+})
+
+
+--// Tabs \\--
+local wel = win:Tab("Welcome")
+local main = win:Tab("Main")
+local lk = win:Tab("Lucky Blocks")
+
+
+--// Welcome \\--
+local sec = wel:Section("Welcome Main")
+local label = sec:Label("Welcome to Infinity Hub")
+
+
+--// Main \\--
+local sec = main:Section("Main")
+local label = sec:Label("Teleports Bridge")
+
+sec:Button("Blue Bridge", function()
+    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-1230, 193, 205))
+end)
+sec:Button("Cyan Bridge", function()
+    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-1230, 194, -24))
+end)
+sec:Button("Green Bridge", function()
+    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-1156, 194, -99))
+end)
+sec:Button("Orage Bridge", function()
+    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-849, 196, -22))
+end)
+sec:Button("Pink Bridge", function()
+    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-852, 193, 205))
+end)
+sec:Button("Purple Bridge", function()
+    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-926, 198, 282))
+end)
+sec:Button("Yellow Bridge", function()
+    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-928, 194, -98))
+end)
+
+
+--// Luicky Blocks Main \\--
+local sec = lk:Section("Spawn Lucky Block (Normal)")
+local toggle = sec:Toggle("Loop Spawn", false,"Toggle", function (lkn)
+    if lkn then
+        getgenv().lknw = true
+        while getgenv().lknw do
+            wait(0.1)
+            game:GetService("ReplicatedStorage").SpawnLuckyBlock:FireServer()       
+        end
+    else
+        getgenv().lknw = false
+    end
+end)
+sec:Button("Spawn 1", function()
+    game:GetService("ReplicatedStorage").SpawnLuckyBlock:FireServer()
+end)
+
+--// Super Luck Block \\--
+local sec = lk:Section("Spawn Super Lucky Block")
+local toggle = sec:Toggle("Loop Spawn", false,"Toggle", function (slk)
+    if slk then
+        getgenv().slkw = true
+        while getgenv().slkw do
+            wait(0.1)
+            game:GetService("ReplicatedStorage").SpawnSuperBlock:FireServer()       
+        end
+    else
+        getgenv().slkw = false
+    end
+end)
+sec:Button("Spawn 1", function()
+    game:GetService("ReplicatedStorage").SpawnSuperBlock:FireServer() 
+end)
+
+--// Diamond Lucky Block \\--
+local sec = lk:Section("Spawn Diamond Lucky Block")
+local toggle = sec:Toggle("Loop Spawn", false,"Toggle", function (dlk)
+    if dlk then
+        getgenv().dlkw = true
+        while getgenv().dlkw do
+            wait(0.1)
+            game:GetService("ReplicatedStorage").SpawnDiamondBlock:FireServer()       
+        end
+    else
+        getgenv().dlkw = false
+    end
+end)
+sec:Button("Spawn 1", function()
+    game:GetService("ReplicatedStorage").SpawnDiamondBlock:FireServer()   
+end)
+
+--// Rainbow Lucky Block \\--
+local sec = lk:Section("Spawn Rainbow Lucky Block")
+local toggle = sec:Toggle("Loop Spawn", false,"Toggle", function (rlk)
+    if rlk then
+        getgenv().rlkw = true
+        while getgenv().rlkw do
+            wait(0.1)
+            game:GetService("ReplicatedStorage").SpawnRainbowBlock:FireServer()       
+        end
+    else
+        getgenv().rlkw = false
+    end
+end)
+sec:Button("Spawn 1", function()
+    game:GetService("ReplicatedStorage").SpawnRainbowBlock:FireServer()   
+end)
+
+--// Galaxy Lucky Block \\--
+local sec = lk:Section("Spawn Galaxy Lucky Block")
+local toggle = sec:Toggle("Loop Spawn", false,"Toggle", function (glk)
+    if glk then
+        getgenv().glkw = true
+        while getgenv().glkw do
+            wait(0.1)
+            game:GetService("ReplicatedStorage").SpawnGalaxyBlock:FireServer()       
+        end
+    else
+        getgenv().glkw = false
+    end
+end)
+sec:Button("Spawn 1", function()
+    game:GetService("ReplicatedStorage").SpawnGalaxyBlock:FireServer()   
+end)
+
+--// Spawn All \\--
+local sec = lk:Section("Loop Spawn All")
+local toggle = sec:Toggle("Loop Spawn All", false,"Toggle", function (AllLuckyBlock)
+    if AllLuckyBlock then
+        getgenv().AllLuckyBlockw = true
+        while getgenv().AllLuckyBlockw do
+            wait(0.1)
+			game:GetService("ReplicatedStorage").SpawnLuckyBlock:FireServer()
+			game:GetService("ReplicatedStorage").SpawnSuperBlock:FireServer()
+			game:GetService("ReplicatedStorage").SpawnDiamondBlock:FireServer()
+			game:GetService("ReplicatedStorage").SpawnRainbowBlock:FireServer()
+            game:GetService("ReplicatedStorage").SpawnGalaxyBlock:FireServer()       
+        end
+    else
+        getgenv().AllLuckyBlockw = false
+    end
+end)
