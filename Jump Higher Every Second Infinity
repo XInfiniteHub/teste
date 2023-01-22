@@ -31,7 +31,7 @@ local toggle = sec:Toggle("Start / Stop Farm", false,"Toggle", function(autfw)
         getgenv().AutoFarmToggle = true
         while getgenv().AutoFarmToggle do
             wait(1)
-            game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-231, 7819, 7963))
+            game.Players.LocalPlayer.Character:MoveTo(Vector3.new(1211, 123468, 8271))
         end
     else
         getgenv().AutoFarmToggle = false
