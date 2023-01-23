@@ -8,17 +8,17 @@ print("Solaris Ui Libray")
 -----------------------------------------------------------
 
 
+--// Libray
+local SolarisLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/XInfiniteHub/teste/main/Infintie%20Hub%20Libray%20S"))()
+local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+
+
 --// Notification \\-
 Notification:Notify(
     {Title = "Welcome", Description = "Infinity Hub Loaded"},
     {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
 )
-
-
---// Libray
-local SolarisLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/XInfiniteHub/teste/main/Infintie%20Hub%20Libray%20S"))()
-local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
-local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
 
 
 --// Tabs \\--
