@@ -17,7 +17,7 @@ Notification:Notify(
   FolderToSave - Name of the folder where the UI files will be stored <string>
 })]]
 local win = SolarisLib:New({
-  Name = "SolarisLib",
+  Name = "Infinity Hub  |  @Darkzin, @Cool",
   FolderToSave = "SolarisLibStuff"
 })
 
