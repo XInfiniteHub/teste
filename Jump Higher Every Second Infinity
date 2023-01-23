@@ -1,39 +1,46 @@
---// Ui Libray \\--
+--// Prints \\--
+print("Infinity Hub Loaded")
+print("Devs: { @Darkzin, @Coold }")
+print("Solaris Ui Libray")
+
+-----------------------------------------------------------
+--     local devs = { Darkzin and Cool }                 --
+-----------------------------------------------------------
+
+
+--// Notification \\-
+Notification:Notify(
+    {Title = "Welcome", Description = "Infinity Hub Loaded"},
+    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
+)
+
+
+--// Libray
 local SolarisLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/XInfiniteHub/teste/main/Infintie%20Hub%20Libray%20S"))()
 local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
 local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
 
 
---// Notification \\--
-Notification:Notify(
-    {Title = "Script By Infinity hub", Description = "Devs: @Darkzin, @Cool"},
-    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
-)
+--// Tabs \\--
+local wel = win:Tab("Welcome")
+local autofarm = win:Tab("Auto Farm")
 
 
---// Main Code \\--
---[[SolarisLib:New({
-  Name - Title of the UI <string>
-  FolderToSave - Name of the folder where the UI files will be stored <string>
-})]]
-local win = SolarisLib:New({
-  Name = "Infinity Hub  |  @Darkzin, @Cool",
-  FolderToSave = "SolarisLibStuff"
-})
+--// Welcome Main \\--
+local sec = wel:Section("Welcome Main")
+local label = sec:Label("Welcome to Infinity Hub")
 
---// Tabs
-local autfw = win:Tab("Auto Farm Wins")
 
---// Auto Farm Wins Main
-local sec = autfw:Section("Auto Farm Wins Main")
-local toggle = sec:Toggle("Start / Stop Farm", false,"Toggle", function(autfw)
-    if autfw then
-        getgenv().AutoFarmToggle = true
-        while getgenv().AutoFarmToggle do
+--// Auto Farm Main \\--
+local sec = autofarm:Section("Auto Farm Main")
+local toggle = sec:Toggle("Auto Farms Wins", false,"Toggle", function(autofarmw)
+    if autofarmw then
+        getgenv().autofarmwS = true
+        while getgenv().autofarmwS do
             wait(1)
-            game.Players.LocalPlayer.Character:MoveTo(Vector3.new(1211, 123468, 8271))
+            game.Players.LocalPlayer.Character:MoveTo(Vector3.new(1212, 123468, 8270))
         end
     else
-        getgenv().AutoFarmToggle = false
+        getgenv().autofarmwS = false
     end
 end)
