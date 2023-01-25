@@ -49,7 +49,7 @@ if PlaceId == 5780309044 then
 
 	--// Print \\--
 	print("Infinity Hub Executed!")
-	print("Version 6.6")
+	print("Version 1.0.0")
 	print("Have Fun")
 	
 	--[===========[
