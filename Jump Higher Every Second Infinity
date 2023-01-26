@@ -9,9 +9,9 @@ print("Solaris Ui Libray")
 
 
 --// Libray
-local SolarisLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/XInfiniteHub/teste/main/Infintie%20Hub%20Libray%20S"))()
 local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
 local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+local SolarisLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/XInfiniteHub/teste/main/Infintie%20Hub%20Libray%20S"))()
 
 
 --// Notification \\-
@@ -19,6 +19,17 @@ Notification:Notify(
     {Title = "Welcome", Description = "Infinity Hub Loaded"},
     {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
 )
+
+
+--// Windown
+--[[SolarisLib:New({
+  Name - Title of the UI <string>
+  FolderToSave - Name of the folder where the UI files will be stored <string>
+})]]
+local win = SolarisLib:New({
+  Name = "Infinity Hub  |  @Darkzin, @Cool",
+  FolderToSave = "SolarisLibStuff"
+})
 
 
 --// Tabs \\--
