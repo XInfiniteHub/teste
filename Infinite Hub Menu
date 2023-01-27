@@ -1,39 +1,6 @@
-getgenv().SecureMode = true
+repeat wait() until game:IsLoaded()
+local PlaceId = game.PlaceId
 
-
---// Libray
-local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
-
-
---// Main Code
-local Window = Rayfield:CreateWindow({
-   Name = "Infinity Hub Safety",
-   LoadingTitle = "Mode Safety Actived",
-   LoadingSubtitle = "Infinity Hub",
-   ConfigurationSaving = {
-      Enabled = true,
-      FolderName = nil, -- Create a custom folder for your hub/game
-      FileName = "Big Hub"
-   },
-   Discord = {
-      Enabled = false,
-      Invite = "ABCD", -- The Discord invite code, do not include discord.gg/
-      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
-   },
-   KeySystem = false, -- Set this to true to use our key system
-   KeySettings = {
-      Title = "Sirius Hub",
-      Subtitle = "Key System",
-      Note = "Join the discord (discord.gg/sirius)",
-      FileName = "SiriusKey",
-      SaveKey = true,
-      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-      Key = "Hello"
-   }
-})
-
-
-
-local Tab = Window:CreateTab("Safety")
-local Paragraph = Tab:CreateParagraph({Title = "o Modo Segurança foi ativado", Content = "A infinity hub é uma gui totalmente privada ou seja não é para ser publicada em hipotese nenhuma, a não ser que os criadores (Darkzin, Cool) decidam publica-la. O modo foi ativado pois começamos a encontrar muitas suspeitas (como a do goldem expirience requiem infinite reflection, e alguns time stops suspeito... Pode ser um engano mais por motivos privamos e ativamos o modo segurança) que demonstram talvez que a gui foi possivelmente publicada, ent"})
-local Paragraph = Tab:CreateParagraph({Title = "", Content = "ativamos e lançaremos um novo loadstring para manter a privacidade.                                                                                                                          Atenciosamente infinity Hub Support."})
+if PlaceId == 5780309044 then
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/XInfiniteHub/teste/main/Infinite%20Hub%20(SA)"))()
+end
