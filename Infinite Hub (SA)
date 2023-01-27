@@ -237,6 +237,7 @@ local Button = Tab:CreateButton({
 
 
 --// Main
+local Tab = Window:CreateTab("Main")
 local Section = Tab:CreateSection("--<    Players Main    >--", true)
 local Button = Tab:CreateButton({
    Name = "Auto Block",
