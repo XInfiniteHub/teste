@@ -54,7 +54,7 @@ local Button = Tab:CreateButton({
    Info = "Info button", -- Speaks for itself, Remove if none.
    Interact = 'Changable',
    Callback = function()
-		local Paragraph = Tab:CreateParagraph({Title = "Update 1.0.0", Content = "Novas opções no main, nova libray e nenhum bug foi encontrado"})
+		local Paragraph = Tab:CreateParagraph({Title = "Update 1.0.0", Content = "Novas opções no main, nova libray e nenhum bug foi encontrado, corrigido o bug do Lag Server"})
    end,
 })
 
@@ -584,22 +584,54 @@ local Button = Tab:CreateButton({
 })
 
 local Section = Tab:CreateSection("--<    Lag Server    >--", true)
-local Toggle = Tab:CreateToggle({
-   Name = "Lag Server (Need Hierophant Green) ",
-   CurrentValue = false,
-   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(LagServer)
-		if LagServer then
-			getgenv().ToggleLagServer = true
-			while getgenv().ToggleLagServer do
-				wait(0.4)
-				loadstring(game:HttpGet('https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/INF%20ESMERAlD'))()
-			end
-		else
-			getgenv().ToggleLagServer = false
-		end
+local Button = Tab:CreateButton({
+   Name = "Lag Server",
+   Info = "Need hierophant green", -- Speaks for itself, Remove if none.
+   Interact = 'Changable',
+   Callback = function()
+	    Rayfield:Notify({
+        Title = "Lag Server",
+        Content = "O lag server é preciso ter o stand hierophant green, e tambem você não ira conseguir para-lo, então tem certeza que quer continuar?",
+        Duration = 6.5,
+        Image = 4483362458,
+        Actions = { -- Notification Buttons
+            Ignore = {
+               Name = "Execute",
+                Callback = function()
+                Rayfield:Notify({
+                   Title = "Lag Server",
+                   Content = "Ao aperta em executar, fice spamando a tecla (E). Cuidado para não ser denunciado.",
+                   Duration = 6.5,
+                   Image = 4483362458,
+                   Actions = { -- Notification Buttons
+                      Ignore = {
+                         Name = "Executar",
+                         Callback = function()
+
+                         local key = game:GetService("UserInputService") --- this is meant for KAT but works for any game
+
+                         key.InputBegan:Connect(function(input)
+                         if input.KeyCode == Enum.KeyCode.E then
+                         for i,v in pairs(game.Players:GetChildren()) do
+                             if v ~= game.Players.LocalPlayer then
+                                  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Character.Head.CFrame * CFrame.new(0,0,.4)
+                                  wait(0.1)
+                             end
+                         end
+                         end
+                         end)
+
+                         loadstring(game:HttpGet("https://raw.githubusercontent.com/XInfiniteHub/teste/main/LagServer/InfiniteEsmeral"))()
+                      end
+                   },
+                },
+                })
+            end
+          },
+       },
+    })
    end,
-})
+}) 
 
 
 
