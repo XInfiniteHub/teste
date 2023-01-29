@@ -653,7 +653,7 @@ local Button = Tab:CreateButton({
 
 --// Auto Boss
 local Tab = Window:CreateTab("Auto Boss")
-local Paragraph = Tab:CreateParagraph({Title = "Auto Boss", Content = "Execute o auto boss quando estiver no mapa contra o boss, execute a mesma loadstrin que iniciara uma nova gui com o auto boss"})
+local Paragraph = Tab:CreateParagraph({Title = "Auto Boss", Content = "Execute o auto boss quando estiver no mapa contra o boss, execute a mesma loadstring que iniciara uma nova gui com o auto boss"})
 
 
 
