@@ -93,15 +93,12 @@ local Button = Tab:CreateButton({
    Info = "Active", -- Speaks for itself, Remove if none.
    Interact = 'Changable',
    Callback = function()
-        local stw = game:GetService("Players").LocalPlayer.Backpack.ShadowTheWorld
-        if stw then
             local args = {
         		[1] = 20000000,           
         		[2] = "shadowdio"			
         	}
         
         	game:GetService("ReplicatedStorage").Main.Timestop:FireServer(unpack(args))
-        end
    end,
 })
 local Button = Tab:CreateButton({
@@ -109,15 +106,12 @@ local Button = Tab:CreateButton({
    Info = "Active", -- Speaks for itself, Remove if none.
    Interact = 'Changable',
    Callback = function()
-        local jsp = game:GetService("Players").LocalPlayer.Backpack.JSP
-        if jsp then
         	local args = {
         		[1] = 20000000,           -- 20000000 = 20 or 15
         		[2] = "jotaro"			-- Shadow dio / Stw
         	}
 
         	game:GetService("ReplicatedStorage").Main.Timestop:FireServer(unpack(args))
-        end
    end,
 })
 local Button = Tab:CreateButton({
@@ -125,15 +119,12 @@ local Button = Tab:CreateButton({
    Info = "Active", -- Speaks for itself, Remove if none.
    Interact = 'Changable',
    Callback = function()
-        local eva = game:GetService("Players").LocalPlayer.Backpack.EVA01
-        if eva then
         	local args = {
         		[1] = 20000000,           -- 20000000 = 20 or 15
         		[2] = "diooh"			-- Shadow dio / Stw
         	}
 
         	game:GetService("ReplicatedStorage").Main.Timestop:FireServer(unpack(args))
-        end
    end,
 })
 local Button = Tab:CreateButton({
@@ -141,15 +132,12 @@ local Button = Tab:CreateButton({
    Info = "Active", -- Speaks for itself, Remove if none.
    Interact = 'Changable',
    Callback = function()
-        local twoh = game:GetService("Players").LocalPlayer.Backpack.TheWorldOverHeavenStand
-        if twoh then
         	local args = {
         		[1] = 20000000,           -- 20000000 = 20 or 15
         		[2] = "diooh"			-- Shadow dio / Stw
         	}
 
         	game:GetService("ReplicatedStorage").Main.Timestop:FireServer(unpack(args))
-        end
    end,
 })
 local Button = Tab:CreateButton({
@@ -157,15 +145,12 @@ local Button = Tab:CreateButton({
    Info = "Active", -- Speaks for itself, Remove if none.
    Interact = 'Changable',
    Callback = function()
-        local steve = game:GetService("Players").LocalPlayer.Backpack.StevePlatinum
-        if steve then
         	local args = {
         		[1] = 20000000,           -- 20000000 = 20 or 15
         		[2] = "jotaro"			-- Shadow dio / Stw
         	}
 
         	game:GetService("ReplicatedStorage").Main.Timestop:FireServer(unpack(args))
-        end
    end,
 })
 local Button = Tab:CreateButton({
@@ -173,15 +158,12 @@ local Button = Tab:CreateButton({
    Info = "Active", -- Speaks for itself, Remove if none.
    Interact = 'Changable',
    Callback = function()
-        local her = game:GetService("Players").LocalPlayer.Backpack.Herobrine
-        if her then
         	local args = {
         		[1] = 20000000,           -- 20000000 = 20 or 15
         		[2] = "jotaro"			-- Shadow dio / Stw
         	}
 
         	game:GetService("ReplicatedStorage").Main.Timestop:FireServer(unpack(args))
-        end
    end,
 })
 local Button = Tab:CreateButton({
@@ -189,15 +171,12 @@ local Button = Tab:CreateButton({
    Info = "Active", -- Speaks for itself, Remove if none.
    Interact = 'Changable',
    Callback = function()
-        local twau = game:GetService("Players").LocalPlayer.Backpack.TheWorldAlternateUniverseStand
-        if twau then
         	local args = {
         		[1] = 20000000,           -- 20000000 = 20 or 15
         		[2] = "diego"			-- Shadow dio / Stw
         	}
 
         	game:GetService("ReplicatedStorage").Main.Timestop:FireServer(unpack(args))
-        end
    end,
 })
 local Button = Tab:CreateButton({
@@ -205,15 +184,12 @@ local Button = Tab:CreateButton({
    Info = "Active", -- Speaks for itself, Remove if none.
    Interact = 'Changable',
    Callback = function()
-        local twova = game:GetService("Players").LocalPlayer.Backpack.TheWorldOVAStand
-        if twova then
         	local args = {
         		[1] = 20000000,           -- 20000000 = 20 or 15
         		[2] = "dioova"			-- Shadow dio / Stw
         	}
 
         	game:GetService("ReplicatedStorage").Main.Timestop:FireServer(unpack(args))
-        end
    end,
 })
 
