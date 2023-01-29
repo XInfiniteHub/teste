@@ -12,6 +12,7 @@ local mouse = plr:GetMouse()
 --// Prints
 print("Infinity Hub Loaded")
 print("Heve fun")
+print("Credits libray: Rayfield Libray / Discord Server: Sirus")
 
 
 
@@ -40,7 +41,7 @@ local Window = Rayfield:CreateWindow({
       FileName = "SiriusKey",
       SaveKey = true,
       GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-      Key = "g*J*u*Iid8UHnQxqL*qOMYZvunDiyxjR@i24&3$RUEqQuOh^Nr"
+      Key = "JL3)ONxod)tF3WtvW$NFeuDZVHSMt$XRgsskJX)&ñ0ZL7zmH2E"
    }
 })
 
@@ -50,14 +51,6 @@ local Window = Rayfield:CreateWindow({
 --// Welcome Main
 local Tab = Window:CreateTab("Welcome")
 local Paragraph = Tab:CreateParagraph({Title = "Welcome Main", Content = "Welcome to Infinity Hub"})
-local Button = Tab:CreateButton({
-   Name = "Info",
-   Info = "Info button", -- Speaks for itself, Remove if none.
-   Interact = 'Changable',
-   Callback = function()
-		local Paragraph = Tab:CreateParagraph({Title = "Update 1.0.0", Content = "Novas opções no main, nova libray e nenhum bug foi encontrado, corrigido o bug do Lag Server"})
-   end,
-})
 
 
 
@@ -75,7 +68,7 @@ local Button = Tab:CreateButton({
 	        Title = "Duvidas no stands",
 	        Content = "Bem, nesta opção ao aperta em algum stand o seu time stop tera certa de 15/20 segundos",
 	        Duration = 6.5,
-	        Image = 4483362458,
+	        Image = 7733964640,
 	        Actions = { -- Notification Buttons
 	        	Ignore = {
 	        		Name = "Entendi!",
@@ -461,12 +454,13 @@ local Toggle = Tab:CreateToggle({
 		if sansSondEffect then
 			getgenv().TogglesansSondEffect = true
 			while getgenv().TogglesansSondEffect do
-				wait(1)
+				wait(10)
 				game:GetService("ReplicatedStorage").Effects.BoneZone.Primary.reverb.SoundId = "rbxassetid://5121734927"
 				game:GetService("ReplicatedStorage").Effects.BoneZone.Primary.eoe.SoundId = "rbxassetid://5121734927"
 			end
 		else
 			getgenv().TogglesansSondEffect = false
+			wait(20)
 			game:GetService("ReplicatedStorage").Effects.BoneZone.Primary.reverb.SoundId = "rbxassetid://401680588"
 			game:GetService("ReplicatedStorage").Effects.BoneZone.Primary.eoe.SoundId = "rbxassetid://4264104024"
 		end
@@ -570,7 +564,7 @@ local Button = Tab:CreateButton({
         Title = "Lag Server",
         Content = "O lag server é preciso ter o stand hierophant green, e tambem você não ira conseguir para-lo, então tem certeza que quer continuar?",
         Duration = 6.5,
-        Image = 4483362458,
+        Image = 7733964640,
         Actions = { -- Notification Buttons
             Ignore = {
                Name = "Execute",
@@ -579,7 +573,7 @@ local Button = Tab:CreateButton({
                    Title = "Lag Server",
                    Content = "Ao aperta em executar, fice spamando a tecla (E). Cuidado para não ser denunciado.",
                    Duration = 6.5,
-                   Image = 4483362458,
+                   Image = 7733964640,
                    Actions = { -- Notification Buttons
                       Ignore = {
                          Name = "Executar",
@@ -676,7 +670,7 @@ local Button = Tab:CreateButton({
 		   Title = "The World Farm",
 		   Content = "Tem certeza que quer iniciar?",
 		   Duration = 6.5,
-		   Image = 4483362458,
+		   Image = 7733964640,
 		   Actions = { -- Notification Buttons
 		      Ignore = {
 		         Name = "Inciar",
@@ -697,7 +691,7 @@ local Button = Tab:CreateButton({
 		   Title = "Star Platinum Farm",
 		   Content = "Tem certeza que quer iniciar?",
 		   Duration = 6.5,
-		   Image = 4483362458,
+		   Image = 7733964640,
 		   Actions = { -- Notification Buttons
 		      Ignore = {
 		         Name = "Inciar",
@@ -718,7 +712,7 @@ local Button = Tab:CreateButton({
 		   Title = "Star Platinum Ova Farm",
 		   Content = "Tem certeza que quer iniciar?",
 		   Duration = 6.5,
-		   Image = 4483362458,
+		   Image = 7733964640,
 		   Actions = { -- Notification Buttons
 		      Ignore = {
 		         Name = "Inciar",
@@ -739,7 +733,7 @@ local Button = Tab:CreateButton({
 		   Title = "Omt Farm",
 		   Content = "Tem certeza que quer iniciar?",
 		   Duration = 6.5,
-		   Image = 4483362458,
+		   Image = 7733964640,
 		   Actions = { -- Notification Buttons
 		      Ignore = {
 		         Name = "Inciar",
@@ -919,6 +913,43 @@ local Button = Tab:CreateButton({
 		end)
 
 		tool.Parent = plr.Backpack
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Infinite Jump",
+   Info = "Click to Infinite Jump", -- Speaks for itself, Remove if none.
+   Interact = 'Changable',
+   Callback = function()
+		local Player = game:GetService'Players'.LocalPlayer;
+		local UIS = game:GetService'UserInputService';
+
+		function Action(Object, Function) if Object ~= nil then Function(Object); end end
+
+		UIS.InputBegan:connect(function(UserInput)
+		    if UserInput.UserInputType == Enum.UserInputType.Keyboard and UserInput.KeyCode == Enum.KeyCode.Space then
+		        Action(Player.Character.Humanoid, function(self)
+		            if self:GetState() == Enum.HumanoidStateType.Jumping or self:GetState() == Enum.HumanoidStateType.Freefall then
+		                Action(self.Parent.HumanoidRootPart, function(self)
+		                    self.Velocity = Vector3.new(0, _G.JumpHeight, 0);
+		                end)
+		            end
+		        end)
+		    end
+		end)
+
+		task.spawn(function ()
+	  		local Slider = Tab:CreateSlider({
+	  		Name = "Jump Height",
+	  		Range = {50, 500},
+	  		Increment = 50,
+	  		Suffix = "Jump",
+	  		CurrentValue = 50,
+	  		Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	  		Callback = function(JumpHeight)
+				_G.JumpHeight = JumpHeight;
+	  		end,
+	  		})
+		end)
    end,
 })
 
