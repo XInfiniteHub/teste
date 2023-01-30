@@ -41,7 +41,7 @@ local Window = Rayfield:CreateWindow({
       FileName = "SiriusKey",
       SaveKey = true,
       GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-      Key = "JL3)ONxod)tF3WtvW$NFeuDZVHSMt$XRgsskJX)&ñ0ZL7zmH2E"
+      Key = "Fmr4NyIL1TzrYxPu!If$·haXP6&0N%gM50jSdo4CZCXva·cR6G"
    }
 })
 
@@ -965,6 +965,20 @@ local Button = Tab:CreateButton({
    Callback = function()
         local Arrow = game:GetService("Workspace").Arrow
         if Arrow then
+            Notification:Notify(
+                {Title = "Arrow Spawned", Description = "..."},
+                {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
+            )
+        end
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Check Rokakaka Fruit",
+   Info = "Click to check", -- Speaks for itself, Remove if none.
+   Interact = 'Changable',
+   Callback = function()
+        local roka = game:GetService("Workspace")["Rokakaka Fruit"]
+        if roka then
             Notification:Notify(
                 {Title = "Arrow Spawned", Description = "..."},
                 {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
