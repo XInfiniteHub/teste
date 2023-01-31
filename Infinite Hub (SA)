@@ -3,6 +3,7 @@ local NotificationHolder = loadstring(game:HttpGet("https://raw.githubuserconten
 local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
 
 
+
 --// Variables
 local plr = game:GetService("Players").LocalPlayer
 local mouse = plr:GetMouse()
@@ -41,7 +42,7 @@ local Window = Rayfield:CreateWindow({
       FileName = "SiriusKey",
       SaveKey = true,
       GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-      Key = "sZo$zH4oUS0VQ8FclJMKu%tdaqSPb5Z8U9wDsg4bWT&8$AQcby"
+      Key = "Fmr4NyIL1TzrYxPu!If$·haXP6&0N%gM50jSdo4CZCXva·cR6G"
    }
 })
 
@@ -541,7 +542,7 @@ local Button = Tab:CreateButton({
 local Tab = Window:CreateTab("Server Remotes")
 local Button = Tab:CreateButton({
    Name = "Update Spawn",
-   Info = "Server Rome UpdateSpawn", -- Speaks for itself, Remove if none.
+   Info = "Server Romote UpdateSpawn", -- Speaks for itself, Remove if none.
    Interact = 'Changable',
    Callback = function()
 	    local args = {
@@ -604,6 +605,28 @@ local Button = Tab:CreateButton({
    end,
 }) 
 
+local Section = Tab:CreateSection("--<    Arena Boss    >--", true)
+local Button = Tab:CreateButton({
+   Name = "Remove Fire Parts",
+   Info = "Click to remove a fire parts", -- Speaks for itself, Remove if none.
+   Interact = 'Changable',
+   Callback = function()
+		if game:GetService("Workspace").Map.Arena.FinalHelicopter.Fire then
+			game:GetService("Workspace").Map.Arena.FinalHelicopter.Fire:Destroy()
+			game:GetService("Workspace").Map.Arena.FinalHelicopter.Fire:Destro()
+		end
+		if game:GetService("Workspace").Map.Arena.mini.Fire then
+			game:GetService("Workspace").Map.Arena.mini.Fire:Destroy()
+			game:GetService("Workspace").Map.Arena.mini.Fire:Destroy()
+		end
+		if game:GetService("Workspace").Map.Arena.Model.Fire then
+			game:GetService("Workspace").Map.Arena.Model.Fire:Destroy()
+			game:GetService("Workspace").Map.Arena.Model.Fire:Destroy()
+			game:GetService("Workspace").Map.Arena.Model.Fire:Destroy()
+			game:GetService("Workspace").Map.Arena.Model.Fire:Destroy()
+		end
+   end,
+})
 
 
 
@@ -1093,6 +1116,20 @@ local Button = Tab:CreateButton({
         if redh then
             Notification:Notify(
                 {Title = "Red Heart Spawned", Description = "..."},
+                {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
+            )
+        end
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Check True Requiem Arrow",
+   Info = "Click to check", -- Speaks for itself, Remove if none.
+   Interact = 'Changable',
+   Callback = function()
+        local trarrow = game:GetService("Workspace")["True Requiem Arrow"]
+        if trarrow then
+            Notification:Notify(
+                {Title = "True Requiem Arrow Spawned", Description = "..."},
                 {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
             )
         end
