@@ -42,7 +42,7 @@ local Window = Rayfield:CreateWindow({
       FileName = "SiriusKey",
       SaveKey = true,
       GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-      Key = "Fmr4NyIL1TzrYxPu!If$·haXP6&0N%gM50jSdo4CZCXva·cR6G"
+      Key = "dmR4Ek2Vxl3gc4zgPy9&rgnu4rPaITxAL·NeK/Eoax&5N!·aOs"
    }
 })
 
@@ -817,6 +817,33 @@ local Toggle = Tab:CreateToggle({
 			end
 		else
 			getgenv().ToggleItemFarm = false
+		end
+   end,
+})
+local Toggle = Tab:CreateToggle({
+   Name = "Grab Tools",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(GrabTools)
+		if GrabTools then
+			getgenv().ToggleGrabTools = true
+			while getgenv().ToggleGrabTools do
+				wait(1)
+				local Human = game:GetService("Players").LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid")
+				for _, v in ipairs(workspace:GetChildren()) do
+					if game:GetService("Players").LocalPlayer.Character and v:IsA("BackpackItem") and v:FindFirstChild("Handle") then
+						Human:EquipTool(v)
+					end
+				end
+				if grabtoolsFunc then grabtoolsFunc:Disconnect() end
+				grabtoolsFunc = workspace.ChildAdded:Connect(function(v)
+					if game:GetService("Players").LocalPlayer.Character and v:IsA("BackpackItem") and v:FindFirstChild("Handle") then
+						game:GetService("Players").LocalPlayer.Character:WaitForChild("Humanoid"):EquipTool(v)
+					end
+				end)
+			end
+		else
+			getgenv().ToggleGrabTools = false
 		end
    end,
 })
