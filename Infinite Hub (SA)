@@ -7,7 +7,6 @@ local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/
 --// Variables
 local plr = game:GetService("Players").LocalPlayer
 local mouse = plr:GetMouse()
-local Human = game:GetService("Players").LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid")
 
 
 
@@ -43,7 +42,7 @@ local Window = Rayfield:CreateWindow({
       FileName = "SiriusKey",
       SaveKey = true,
       GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-      Key = "Fmr4NyIL1TzrYxPu!If$·haXP6&0N%gM50jSdo4CZCXva·cR6G"
+      Key = "LC)baJ2fcidV3rpl=6RaYo2kBRNmG(xHtf1&sK8(!WzqaoVd4l"
    }
 })
 
@@ -830,6 +829,7 @@ local Toggle = Tab:CreateToggle({
 			getgenv().ToggleGrabTools = true
 			while getgenv().ToggleGrabTools do
 				wait(1)
+				local Human = game:GetService("Players").LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid")
 				for _, v in ipairs(workspace:GetChildren()) do
 					if game:GetService("Players").LocalPlayer.Character and v:IsA("BackpackItem") and v:FindFirstChild("Handle") then
 						Human:EquipTool(v)
